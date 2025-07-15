@@ -1,42 +1,46 @@
 body {
-  font-family: sans-serif;
-  text-align: center;
-  background-color: #f9f9f9;
+  font-family: Arial, sans-serif;
+  background-color: #eef6fc;
   padding: 20px;
+  color: #333;
 }
 
 h1 {
-  margin-bottom: 30px;
+  text-align: center;
+  color: #005f99;
 }
 
-#grid-container {
+.grid-container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   gap: 10px;
-  max-width: 1200px;
-  margin: 0 auto;
+  margin-top: 30px;
 }
 
-.cell {
-  background-color: #e0e0e0;
-  border-radius: 8px;
-  padding: 12px;
-  min-height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.ramo {
+  background-color: #d0eaff;
+  border: 2px solid #a0cfff;
+  border-radius: 10px;
+  padding: 10px;
   text-align: center;
+  font-size: 0.9rem;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-  font-size: 14px;
-  font-weight: 500;
+  user-select: none;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
-.cell:hover {
-  background-color: #d0d0d0;
+.ramo:hover {
+  background-color: #b4dcff;
 }
 
-.cell.active {
-  background-color: #81c784;
+.ramo.aprobado {
+  background-color: #7bc4ff;
+  border-color: #3fa3ff;
   color: white;
+  font-weight: bold;
+}
+
+.ramo.bloqueado {
+  opacity: 0.4;
+  pointer-events: none;
 }
